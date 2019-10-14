@@ -50,11 +50,21 @@ public:
 	int getMaxResponseTime();
 	float getCpuUtil();
 	int getIps();
+	int getClientsServed();
 
 	void setCpuUtil(float value)
 	{
 		cpuUtil = value;
 		aps = cpuUtil / cpu.d;
+	}
+	void setCpuD(float value)
+	{
+		cpu.d = value;
+		aps = cpuUtil / cpu.d;
+	}
+	void setDiskD(int disk, float value)
+	{
+		disks[disk].d = value;
 	}
 
 	void incLoad();

@@ -162,6 +162,11 @@ int Virtual::getIps()
 	return ips;
 }
 
+int Virtual::getClientsServed()
+{
+	return clientsServed;
+}
+
 void Virtual::incLoad()
 {
 	cpuUtil += 0.01;
